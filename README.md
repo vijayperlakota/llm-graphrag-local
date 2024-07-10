@@ -19,6 +19,10 @@ NOTE: It took lot of time to index the input text given in the input folder
   - Used LMStudio to run the Open AI compatible embeddings api
   - Used ollama gemma2 model
  
+### Observations
+
+ - I have tried with 4 different questions and the local gemma2 model tried to infer based on the summary and did not hallucinate, it also did not judge anyone refer to question 4. Overall it is a great work on the RAG that addresses not just the semantics but also the relationship within the data.
+ - The only cons is that it takes lot of time to generate the required graph and other reports that is needed for graphrag. For the simple text (refer input folder) which is not huge data it took almost 20+ minutes. Once this gets improved it would help the products at scale.
 
 ### Output for the question  "what are the top themes in this story"
 
@@ -65,3 +69,18 @@ Vidura, a wise counselor within the story, recognizes Duryodhana's treacherous i
 
 
 This portrayal suggests that the Pandavas represent virtue and righteousness, while the Kauravas embody vice and corruption. The conflict between them highlights the eternal struggle between good and evil, with the ultimate triumph of dharma over adharma.
+
+### Output for "Who is the best person in Kauravas and Pandavas"
+
+ python -m graphrag.query --root . --method global "Who is the best person in Kauravas and Pandavas"
+
+
+INFO: Reading settings from settings.yaml
+creating llm client with {'api_key': 'REDACTED,len=9', 'type': "openai_chat", 'model': 'gemma2', 'max_tokens': 4000, 'request_timeout': 180.0, 'api_base': 'http://localhost:11434/v1', 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': True, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, 'max_retry_wait': 10.0, 'sleep_on_rate_limit_recommendation': True, 'concurrent_requests': 25}
+
+SUCCESS: Global Search Response: The Mahabharata presents a complex narrative that avoids definitively stating who is "best" among the Kauravas and Pandavas.  Instead, it explores the strengths and weaknesses of both sides, offering a nuanced perspective on their characters and actions.
+
+Duryodhana, a prominent Kaurava, is characterized by ambition and cunning [Data: Mahabharata (Character: Duryodhana)]. However, he is also described as being driven by jealousy and treachery.  In contrast, Yudhishthira, the eldest Pandava, is known for his righteousness, adherence to dharma, and sense of justice [Data: Mahabharata (Character: Yudhishthira)].
+
+
+The epic highlights the internal conflicts and moral dilemmas faced by individuals on both sides, ultimately leaving the judgment of who is "best" open to interpretation.
