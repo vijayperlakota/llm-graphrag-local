@@ -36,3 +36,13 @@ Another significant theme is the reflection of broader societal tensions in anci
 
 Family ties and succession also play a crucial role in shaping the narrative. The conflict arises from the Pandavas' claim to the throne, challenging the Kauravas' rule [Data: Entities (11), Relationships (12), Entities (12), Relationships (12), Entities (12), Relationships (8)]. This underscores the importance of lineage and inheritance in determining power dynamics within the Kuru Kingdom.
 
+### Output for "Who is Arjuna and his siblings"
+
+ python -m graphrag.query --root . --method global "Who is Arjuna and his siblings"
+
+
+INFO: Reading settings from settings.yaml
+creating llm client with {'api_key': 'REDACTED,len=9', 'type': "openai_chat", 'model': 'gemma2', 'max_tokens': 4000, 'request_timeout': 180.0, 'api_base': 'http://localhost:11434/v1', 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': True, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, 'max_retry_wait': 10.0, 'sleep_on_rate_limit_recommendation': True, 'concurrent_requests': 25}
+
+SUCCESS: Global Search Response: Arjuna is one of the Pandava brothers, sons of King Pandu [Data: Reports (1, 2)].  His siblings are Yudhishthira, Bhima, Nakula, and Sahadeva [Data: Reports (3)].
+
