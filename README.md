@@ -1,32 +1,32 @@
 # llm-graphrag-local
 
-### NOTE: ignore the peotry setup
+### NOTE: ignore the poetry setup
 
 This project is done by following the demo of https://www.youtube.com/watch?v=BLyGDTNdad0
 
-- Uses https://microsoft.github.io/graphrag/ which is efficient than common RAG
+- Uses https://microsoft.github.io/graphrag/ which is more efficient than common RAG
 - Commands to run
   - To index the data
     - python -m graphrag.index --init --root .
   - To query the data
-    - python -m graphrag.query --root . --method global "what are the top themes in this story"
+    - python -m graphrag.query --root . --method global "What are the top themes in this story"
 - Used Mahabarata summray data
 
-NOTE: It took lot of time to index the input text given in the input folder
+NOTE: It took a lot of time to index the input text given in the input folder
 
 - Setup
-  - In setup.yaml make sure that base url and embeddings models are correctly configured for local
-  - Used LMStudio to run the Open AI compatible embeddings api
-  - Used ollama gemma2 model
+  - In setup.yaml make sure that base URL and embeddings models are correctly configured for local
+  - Used LMStudio to run the Open AI compatible embeddings API
+  - Used Ollama Gemma2 model
  
 ### Observations
 
- - I have tried with 4 different questions and the local gemma2 model tried to infer based on the summary and did not hallucinate, it also did not judge anyone refer to question 4. Overall it is a great work on the RAG that addresses not just the semantics but also the relationship within the data.
- - The only cons is that it takes lot of time to generate the required graph and other reports that is needed for graphrag. For the simple text (refer input folder) which is not huge data it took almost 20+ minutes. Once this gets improved it would help the products at scale.
+ - I have tried with 4 different questions and the local gemma2 model tried to infer based on the summary and did not hallucinate, it also did not judge anyone (refer to question 4). Overall, it is great work on the RAG that addresses the semantics and the relationship within the data.
+ - The only con is that it takes a lot of time to generate the required graph and other reports needed for **graphrag**. For the simple text (refer to input folder) which is not huge data it took almost 20+ minutes. Once this gets improved it would help the products at scale.
 
-### Output for the question  "what are the top themes in this story"
+### Output for the question  "What are the top themes in this story"
 
-- python -m graphrag.query --root . --method global "what are the top themes in this story"
+- python -m graphrag.query --root . --method global "What are the top themes in this story"
 - 
 INFO: Reading settings from settings.yaml
 creating llm client with {'api_key': 'REDACTED,len=9', 'type': "openai_chat", 'model': 'gemma2', 'max_tokens': 4000, 'request_timeout': 180.0, 'api_base': 'http://localhost:11434/v1', 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': True, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, SUCCESS: Global Search Response: The Mahabharata explores several key themes that resonate throughout the epic narrative.
