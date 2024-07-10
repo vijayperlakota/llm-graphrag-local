@@ -46,3 +46,22 @@ creating llm client with {'api_key': 'REDACTED,len=9', 'type': "openai_chat", 'm
 
 SUCCESS: Global Search Response: Arjuna is one of the Pandava brothers, sons of King Pandu [Data: Reports (1, 2)].  His siblings are Yudhishthira, Bhima, Nakula, and Sahadeva [Data: Reports (3)].
 
+
+### Output for "Who is good compared to Kauravas and Pandavas"
+
+python -m graphrag.query --root . --method global "Who is good compared to Kauravas and Pandavas"
+
+
+INFO: Reading settings from settings.yaml
+creating llm client with {'api_key': 'REDACTED,len=9', 'type': "openai_chat", 'model': 'gemma2', 'max_tokens': 4000, 'request_timeout': 180.0, 'api_base': 'http://localhost:11434/v1', 'api_version': None, 'organization': None, 'proxy': None, 'cognitive_services_endpoint': None, 'deployment_name': None, 'model_supports_json': True, 'tokens_per_minute': 0, 'requests_per_minute': 0, 'max_retries': 10, 'max_retry_wait': 10.0, 'sleep_on_rate_limit_recommendation': True, 'concurrent_requests': 25}
+
+SUCCESS: Global Search Response: ##  The Morality of the Mahabharata: Pandavas vs. Kauravas
+
+The epic tale of the Mahabharata presents a complex moral landscape, pitting the righteous Pandavas against the power-hungry Kauravas.
+
+According to reports on the themes of the Mahabharata [Data: Mahabharata (Themes)], the Pandavas are generally considered heroes who fight for justice and dharma (righteousness).  In contrast, the Kauravas are portrayed as driven by greed and ambition, ultimately leading them down a path of treachery and destruction.
+
+Vidura, a wise counselor within the story, recognizes Duryodhana's treacherous intentions [Data: Mahabharata (Character: Vidura)] and actively supports the Pandavas in their struggle for justice. He emphasizes the importance of ethical conduct and warns against succumbing to greed and ambition [Data: Mahabharata (Themes)].
+
+
+This portrayal suggests that the Pandavas represent virtue and righteousness, while the Kauravas embody vice and corruption. The conflict between them highlights the eternal struggle between good and evil, with the ultimate triumph of dharma over adharma.
